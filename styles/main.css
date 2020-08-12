@@ -4,6 +4,8 @@
 
 /* Se quiser saber quanto equivale um 1rem, basta multiplicar de acordo com o base que foi estabelecida, se for 100% = 1 rem = 16px ai multiplica o 1 por 16. */
 
+/* # - é pra chamar id
+   . - é pra chamar class */
 :root {
     /* variaveis css  */
     --color-background: #F0F0F7;
