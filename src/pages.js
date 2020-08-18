@@ -1,6 +1,6 @@
-const Database = require('./database/db')
+const Database = require("./database/db")
 
-const {subjects, weekdays, getSubject, convertHoursToMinutes} = require('./utils/format')
+const {subjects, weekdays, getSubject, convertHoursToMinutes} = require("./utils/format")
 // const { catch } = require('./database/db')
 
 function pageLanding(req, res){
@@ -10,7 +10,7 @@ function pageLanding(req, res){
 async function pageStudy(req, res){
     const filters = req.query //Usado para fazer requerimento. Retorno o valor requerido. 
 
-    if (!filters.subjects || !filters.weekday || !filters.time) {
+    if (!filters.subject || !filters.weekday || !filters.time) {
         return res.render("study.html", { filters, subjects, weekdays }) 
     }
 
@@ -26,8 +26,8 @@ async function pageStudy(req, res){
             FROM class_schedule
             WHERE class_schedule.class_id = classes.id
             AND class_schedule.weekday = ${filters.weekdays}
-            AND class_schedule.time_from <= ${filters.ToMinutes}
-            AND class_schedule.time_to > ${filters.ToMinutes}
+            AND class_schedule.time_from <= ${timeToMinutes}
+            AND class_schedule.time_to > ${timeToMinutes}
         )
         AND classes.subject = '${filters.subject}'
     `
@@ -41,7 +41,7 @@ async function pageStudy(req, res){
                 proffy.subject = getSubject(proffy.subject)
             })
 
-            return res.render('study.html', { proffys, subjects, filters, weekdays })
+            return res.render("study.html", { proffys, subjects, filters, weekdays })
 
         } catch(error){
             console.log(error)
@@ -57,7 +57,7 @@ function pageGiveClasses(req, res){
 async function saveClasses(req, res) {
     const createProffy = require('./database/createProffy')
 
-    const proffyValue={
+    const proffyValue = {
         name: req.body.name,
         avatar: req.body.avatar,
         whatsapp: req.body.whatsapp,

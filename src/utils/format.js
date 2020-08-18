@@ -9,7 +9,7 @@ const subjects = [
     "Matemática",
     "Português",
     "Química",
- ]
+ ];
  
  const weekdays = [
     "Domingo",
@@ -19,12 +19,12 @@ const subjects = [
     "Quinta",
     "Sexta",
     "Sábado",
- ]
+ ];
 
 //Funcionalidades
 
 function getSubject(subjectNumber){
-    const position = +subjectNumber -1
+    const position = +subjectNumber -1;
     return subjects[position]
 }
 
