@@ -72,7 +72,7 @@
                         <select name="subject" id="subject" required>
                             <option value="" >Selecione uma opção</option>
                             {%for subject in subjects%}
-                            <option value="{{loop.index}}">
+                            <option id="item" value="{{loop.index}}">
                                 {{subject}}
                             </option>
                             {%endfor%}

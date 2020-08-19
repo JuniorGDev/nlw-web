@@ -19,6 +19,13 @@
     font: 1.6rem Archivo;
 }
 
+.select-block select option:last-child {
+    font-family: Poppins;
+    color: var(--color-text-complement); 
+    border: 10px solid var(--color-small-info);
+    margin: 20rem;  
+}
+
 .textarea-block textarea{
     padding: 1.2rem 1.6rem;
     height: 16rem;
