@@ -9,7 +9,7 @@ const subjects = [
     "Matemática",
     "Português",
     "Química",
- ];
+ ]
  
  const weekdays = [
     "Domingo",
@@ -19,7 +19,7 @@ const subjects = [
     "Quinta",
     "Sexta",
     "Sábado",
- ];
+ ]
 
 //Funcionalidades
 

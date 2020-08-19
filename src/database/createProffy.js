@@ -1,4 +1,4 @@
-module.exports = async function(db, { proffyValue, classValue, classScheduleValues }) {
+module.exports = async function (db, {proffyValue, classValue, classScheduleValues }) {
     //inserir dados na table de teachers
     //usar crase para quebra de linha, aspas simples não possibilita quebra de linha no JS.
     const insertedProffy = await db.run(`
