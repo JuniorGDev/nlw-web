@@ -81,7 +81,7 @@ async function saveClasses(req, res) {
         let queryString = "?subject=" + req.body.subject
         queryString += "&weekday=" + req.body.weekday[0]
         queryString += "&time=" + req.body.time_from[0]
-        return res.redirect("/study" + queryString) //Redireciona para a pagina do Study
+        return res.redirect("/sucess" + queryString) //Redireciona para a pagina do Study
     } catch (error) {
         console.log(error)
     }  

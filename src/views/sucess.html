@@ -24,27 +24,30 @@
     <title>Proffy | Sua plataforma de estudos online</title>
     <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/partials/page-landing.css">
+    <link rel="stylesheet" href="styles/partials/page-sucess.css">
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet">
 
 </head>
-<body id="page-success-insert">
-    <div id="container">
-        <div class="logo-container">
-            <h2>Cadastro salvo!</h2>
-            <p>
-                Tudo certo, seu cadastro está na nossa lista de professores.<br/>
-                Agora é só ficar de olho no seu WhatsApp.
-            </p>
-        </div>
+<body >
+    <div id="page-success-insert">
+        <div id="checked">
+            <div class="icon-check position">
+                <img src="/images/icons/success-check-icon.svg" alt="">
+            </div>
 
-        <img class="hero-image" src="/images/landing.svg" alt="Plataforma de Estudos">
+            <div class="message-check position">
+                <h2>Cadastro salvo!</h2>
+                <p>
+                    Tudo certo, seu cadastro está na nossa lista de professores.<br/>
+                    Agora é só ficar de olho no seu WhatsApp.
+                </p>
+            </div>
 
-        <div class="buttons-container">
-            <a class="study" href="/study"><img src="/images/icons/study.svg" alt="Estudar">Acessar a lista</a>
+            <div class="buttons-container position">
+                <a class="study" href="/study?subject={{filters.subject}}&weekday={{filters.weekday}}&time={{filters.time}}"><img src="/images/icons/study.svg"   alt="Estudar">Acessar a lista</a>
+            </div>
         </div>
-        
-        <p class="total-connections">Total de 200 conexões ja realizadas <img src="/images/icons/purple-heart.svg" alt="Coração roxo"></p>
     </div>
+    <script src="/public/scripts/redirectToStudy.js"></script>
 </body>
 </html>
