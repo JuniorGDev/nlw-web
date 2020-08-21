@@ -48,6 +48,11 @@ function pageGiveClasses(req, res){
     return res.render("give-classes.html", {subjects, weekdays})
 }
 
+function pageSucess(req, res) {
+    const filters = req.query
+    return res.render("sucess.html", {filters})
+}
+
 async function saveClasses(req, res) {
     const createProffy = require('./database/createProffy')
     const proffyValue = {
@@ -85,5 +90,6 @@ module.exports = {
     pageLanding,
     pageStudy,
     pageGiveClasses,
-    saveClasses
+    saveClasses,
+    pageSucess
 }
