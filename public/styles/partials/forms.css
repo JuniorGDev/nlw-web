@@ -19,11 +19,19 @@
     font: 1.6rem Archivo;
 }
 
-.select-block select option:last-child {
+.select-block select option {
     font-family: Poppins;
     color: var(--color-text-complement); 
-    border: 10px solid var(--color-small-info);
-    margin: 20rem;  
+    -moz-border-start: 20px;
+    border-radius: 10px solid var(--color-small-info);
+    padding: 50px;
+    transition: 0.2s ease all;
+
+}
+
+.select-block select option#item {
+    -webkit-border-radius: 0 5px 5px 0;
+    border: none;
 }
 
 .textarea-block textarea{
