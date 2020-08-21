@@ -19,11 +19,12 @@
     font: 1.6rem Archivo;
 }
 
-.select-block select option:last-child {
+.select-block select option#item {
+    position: relative;
     font-family: Poppins;
     color: var(--color-text-complement); 
     border: 10px solid var(--color-small-info);
-    margin: 20rem;  
+    margin: 200rem;
 }
 
 .textarea-block textarea{
